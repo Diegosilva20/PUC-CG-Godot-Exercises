@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4o3061j5g38c"]
+
+[ext_resource type="Script" uid="uid://dfi2m2aymgxh3" path="res://Exercicio02/experimento_padroes.gd" id="1_nygpc"]
+[ext_resource type="Texture2D" uid="uid://b6ym3jk7b70lm" path="res://listras.svg" id="2_dvgti"]
+[ext_resource type="Texture2D" uid="uid://didscwxman3ia" path="res://pontos.svg" id="3_f7my1"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_nygpc")
+texture_listras = ExtResource("2_dvgti")
+texture_pontos = ExtResource("3_f7my1")

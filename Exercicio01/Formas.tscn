@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxc5yscs65leu"]
+
+[ext_resource type="Script" uid="uid://ckk8yqhf7hk4y" path="res://Exercicio01/formas.gd" id="1_j7qib"]
+[ext_resource type="Texture2D" uid="uid://cakr1jnei7tmj" path="res://icon.svg" id="2_6bvc4"]
+
+[node name="Formas" type="Node2D"]
+script = ExtResource("1_j7qib")
+texture_padrao = ExtResource("2_6bvc4")

@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://d28eex0j6xwk6"]
+
+[ext_resource type="Script" uid="uid://b0l18qbhukt4q" path="res://Exercicio03/Player.gd" id="1_v7a1r"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_isxvg"]
+size = Vector2(40, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_idrn4"]
+custom_solver_bias = 0.162
+margin = 1.183
+
+[sub_resource type="BoxMesh" id="BoxMesh_hmrai"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6h1aq"]
+
+[node name="Level" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27489567, 0.005394459, -0.04677546)
+mesh = SubResource("PlaneMesh_isxvg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_idrn4")
+
+[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera_ref")]
+script = ExtResource("1_v7a1r")
+camera_ref = NodePath("Camera3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("BoxMesh_hmrai")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("BoxShape3D_6h1aq")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(0.99992895, -0.011916056, -0.0003186929, 0.011903265, 0.9967122, 0.08014484, -0.0006373652, -0.080142945, 0.9967832, -0.03238499, -0.45657265, 3.080782)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0049567223, 0.99998766, 0, -0.99998766, 0.0049567223, 0, 4.2928057, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.017120792, 0.99985343, 0, -0.99985343, 0.017120792, -0.19523859, 6.9725156, 0.43486118)
+light_energy = 5.619
+spot_range = 3.8607633
+spot_angle = 47.041725
