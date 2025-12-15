@@ -33,10 +33,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_idrn4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("WorldBoundaryShape3D_isxvg")
 
-[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera_ref")]
-transform = Transform3D(1, 0, 0, 0, 0.9993104, 0.03713207, 0, -0.03713207, 0.9993104, 0, 0.26971555, 0)
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(0.9998477, 0, 0.017452406, 0, 1, 0, -0.017452406, 0, 0.9998477, 0, 2, 0)
+slide_on_ceiling = false
 script = ExtResource("1_v7a1r")
-camera_ref = NodePath("Camera3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.129894, 0)
