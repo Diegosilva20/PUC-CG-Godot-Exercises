@@ -7,7 +7,7 @@
 size = Vector2(40, 40)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_idrn4"]
-albedo_color = Color(0.15294118, 0.44705883, 0.6117647, 1)
+albedo_color = Color(1, 1, 1, 0)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_isxvg"]
 
@@ -26,7 +26,7 @@ albedo_color = Color(2.2299299e-05, 1.3402442, 0.6141931, 1)
 [node name="Floor" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
-transform = Transform3D(0.9999992, -0.0008100452, 0.00095249317, 0.00081102614, 0.99999917, -0.0010346125, -0.0009516581, 0.0010353806, 0.9999989, 0.38579607, -0.08532095, -0.01706922)
+transform = Transform3D(2.3365023, -0.0040499703, 0.0020303451, 0.001894966, 4.9996796, -0.0022053916, -0.0022235534, 0.0051765754, 2.131609, -0.03125751, -0.06953335, 0.03853929)
 mesh = SubResource("PlaneMesh_isxvg")
 surface_material_override/0 = SubResource("StandardMaterial3D_idrn4")
 
@@ -56,6 +56,6 @@ transform = Transform3D(1, 0, 0, 0, 0.64039123, 0.76804894, 0, -0.76804894, 0.64
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.017120792, 0.99985343, 0, -0.99985343, 0.017120792, -0.19523859, 6.9725156, 0.43486118)
 light_energy = 5.619
-spot_range = 3.8607633
+spot_range = 13.974
 spot_angle = 47.041725
 script = ExtResource("2_isxvg")
